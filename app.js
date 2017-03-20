@@ -25,7 +25,7 @@ db.once("open", function(){
   //all db communication goes here
 });
 
-app.use("/questions", routes);
+app.use("/assignments", routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next){
