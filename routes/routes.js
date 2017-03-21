@@ -4,7 +4,7 @@ var express = require("express");
 var router = expressRouter();
 var ListItem = require("./models").ListItem;
 
-const myctrl = require('./controllers/myctrl');
+const myctrl = require('./controllers');
 
 router.get('/', myctrl.listAll);
 router.get('/:assignmentID', myctrl.getAssignment);

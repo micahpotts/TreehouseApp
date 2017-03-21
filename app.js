@@ -10,8 +10,15 @@ var logger = require("morgan");
 app.use(logger("dev"));
 app.use(jsonParser());
 
-var mongoose = require("mongoose");
+//serve static files from /public
+app.use(express.static(__dirname + '/public'));
 
+//view engine setup
+// app.set('view engine', 'pug');
+// app.set('views', __dirname + '/views')
+
+var mongoose = require("mongoose");
+//connect to db
 mongoose.connect("mongodb://localhost:27017/syllabusDatabase");
 
 var db = mongoose.connection;
