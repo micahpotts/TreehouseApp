@@ -2,7 +2,7 @@
 
 var express = require("express");
 var app = express();
-var routes = require("./routes");
+var routes = require("./routes/routes");
 
 var jsonParser = require("body-parser").json;
 var logger = require("morgan");
