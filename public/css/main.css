@@ -1,0 +1,18 @@
+body {
+  padding-top: 5rem;
+  background-color: rgba(85, 191, 63, 0.56);
+}
+.wholeBody {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.disabled{
+  text-decoration: line-through;
+}
+
+form {
+  padding-bottom: 30px;
+}
+
+.btn-group { display: inline-block; }

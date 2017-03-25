@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="CodeLouisville Treehouse Tracking App">
+    <meta name="author" content="Micah Potts">
+
+
+    <title>Big Bearin' It</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/main.css" rel="stylesheet">
+
+    <!-- UI Router -->
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script> -->
+
+
+    <!-- Jquery -->
+    <!-- <script src="./app.js"></script> -->
+
+  </head>
+
+  <body ng-app="syllabusApp">
+
+      <div class="container">
+        <div class="wholeBody" ng-controller="mainCtrl">
+          <h1>Treehouse Checklist</h1>
+
+          <p class="lead">Use this app to keep up with which Treehouse modules you should complete each week.<br> Course is broken up into 12 weeks.</p>
+
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" ng-model="assignment.name" placeholder="Add Module or Assignment"></input>
+
+            <div class="form-group">
+              <label for="sel1">Week:</label>
+              <select class="form-control" ng-model="assignment.week" id="sel1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+              </select>
+            </div>
+
+            <button class="btn btn-success" ng-click="addPost()" type="submit">Submit</button>
+          </form>
+
+
+          <div role="group row" id="parentBtn">
+            <!-- <clickFunctions> -->
+              <div ng-repeat="assignment in assignments | orderBy: 'week'">
+                <div class="btn-group">
+
+                  <button type="button" class="btn btn-default" aria-label="Week Up" ng-click="weekChange(post)">
+                    <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+                  </button>
+
+                  <button type="button" class="btn btn-success" >{{assignment.week}}</button>
+
+                  <button type="button" class="btn btn-default" aria-label="Week Down" ng-model="$ctrl.weekup($ctrl.selectedAss)">
+                    <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                  </button>
+
+                  <button type="button" class="btn btn-default">{{assignment.name}}</button>
+
+                  <button type="button" class="btn btn-default" ng-model="assignment.delete" aria-label="Delete">
+                    <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
+                  </button>
+
+                </div>
+              </div>
+            <!-- </clickFunctions> -->
+          </div>
+
+
+        </div>
+
+      </div><!-- /.container -->
+
+
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>
