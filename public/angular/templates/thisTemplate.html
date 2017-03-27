@@ -1,9 +1,10 @@
 <form class="form-inline my-2 my-lg-0">
-  <input class="form-control mr-sm-2" type="text" ng-model="assignment.name" placeholder="Add Module or Assignment"></input>
+  <input class="form-control mr-sm-2" type="text" ng-model="newName" placeholder="Add Module or Assignment"></input>
 
   <div class="form-group">
     <label for="sel1">Week:</label>
-    <select class="form-control" ng-model="assignment.week" id="sel1">
+    <select class="form-control" ng-model="newWeek" id="sel1">
+      <option>0</option>
       <option>1</option>
       <option>2</option>
       <option>3</option>
@@ -19,7 +20,7 @@
     </select>
   </div>
 
-  <button class="btn btn-success" ng-click="addAssignment()" type="submit">Submit</button>
+  <button class="btn btn-success" ng-click="newAss()" type="submit">Submit</button>
 </form>
 
 <div role="group row" id="parentBtn">
@@ -27,19 +28,19 @@
     <div ng-repeat="assignment in assignments | orderBy: 'week'">
       <div class="btn-group">
 
-        <button type="button" class="btn btn-default" aria-label="Week Up">
+        <button type="button" class="btn btn-default" aria-label="Week Up" ng-click="upAss(assignment._id)">
           <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
         </button>
 
         <button type="button" class="btn btn-success" >{{assignment.week}}</button>
 
-        <button type="button" class="btn btn-default" aria-label="Week Down">
+        <button type="button" class="btn btn-default" aria-label="Week Down" ng-click="downAss(assignment._id)">
           <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
         </button>
 
         <button type="button" class="btn btn-default">{{assignment.name}}</button>
 
-        <button type="button" class="btn btn-default"  aria-label="Delete" ng-click="deleteAss()">
+        <button type="button" class="btn btn-default"  aria-label="Delete" ng-click="deleteAss(assignment._id)">
           <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
         </button>
 

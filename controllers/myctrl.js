@@ -49,15 +49,23 @@ module.exports = {
   },
 
   weekUp: function(req, res){
-    req.item.week++;
-    req.item.save();
-    res.json(req.item);
+    if(req.item.week < 12) {
+      req.item.week++;
+      req.item.save();
+      res.json(req.item);
+    } else {
+      return req.item.week;
+    }
   },
 
   weekDown: function(req, res){
+    if(req.item.week > 0) {
     req.item.week--;
     req.item.save();
     res.json(req.item);
+  } else {
+    return req.item.week;
+  }
   },
 
   //DELETE /assignmentList/:assignmentID/

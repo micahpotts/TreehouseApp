@@ -10,8 +10,8 @@ router.param("assignmentID", myctrl.getAssByParamID);
 router.get('/', myctrl.listAll);
 router.get('/:assignmentID', myctrl.getAssignment);
 router.post('/', myctrl.newAssignment);
-router.post('/:assignmentID/weekup', myctrl.weekUp);
-router.post('/:assignmentID/weekdown', myctrl.weekDown);
+router.put('/:assignmentID/weekup', myctrl.weekUp);
+router.put('/:assignmentID/weekdown', myctrl.weekDown);
 router.delete('/:assignmentID', myctrl.deleteAssignment);
 
 
