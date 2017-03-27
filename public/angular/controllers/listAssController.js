@@ -82,12 +82,14 @@ myApp.controller("ListAssignmentsController", [
 
       $http({
         method: "POST",
-        url: `http://localhost:3000/assignments`
+        url: `http://localhost:3000/assignments`,
+        data: newAssCity
       })
         .then(
           function(response) {
             $scope.data = response.data;
             $scope.status = response.status;
+            $route.reload();
           },
           function(response) {
             $scope.data = response.data || "Request failed";
