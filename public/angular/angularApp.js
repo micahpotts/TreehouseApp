@@ -5,14 +5,13 @@ myApp.config([
   function($routeProvider){
 
     $routeProvider
-      .when("/", {
-        templateUrl: "/templates/thisTemplate.html",
-        controller: "listAssController"
-      })
+
       .when("/assignments", {
-        templateUrl: "thisTemplate.html",
-        controller: "listAssController"
-      });
+        templateUrl: "angular/templates/thisTemplate.html",
+        controller: "ListAssignmentsController"
+      })
+
+      .otherwise("/assignments");
 
 
   }
