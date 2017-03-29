@@ -3,6 +3,7 @@
 var express = require("express");
 var app = express();
 var routes = require("./routes/routes");
+var path = require("path");
 
 var jsonParser = require("body-parser").json;
 var logger = require("morgan");
@@ -13,13 +14,16 @@ app.use(jsonParser());
 //serve static files from /public
 app.use(express.static(__dirname + '/public'));
 
+//serve files from node_modules
+app.use('/node_modules',express.static(path.join(__dirname, 'node_modules')));
+
 //view engine setup
 // app.set('view engine', 'pug');
 // app.set('views', __dirname + '/views')
 
 var mongoose = require("mongoose");
 //connect to db
-mongoose.connect("mongodb://localhost:27017/syllabusDatabase");
+mongoose.connect("mongodb://localhost:27017/codeLou");
 
 var db = mongoose.connection;
 

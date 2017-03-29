@@ -1,6 +1,6 @@
 body {
   padding-top: 5rem;
-  background-color: rgba(85, 191, 63, 0.56);
+  /*background-color: rgba(85, 191, 63, 0.56);*/
 }
 .wholeBody {
   padding: 3rem 1.5rem;
@@ -16,3 +16,30 @@ form {
 }
 
 .btn-group { display: inline-block; }
+
+.assignmentName {
+  text-align: center;
+  flex: 1;
+  font-size: 1.3em;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.assignmentRow {
+  margin: 0 auto 16px auto;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: center;
+
+}
+
+.assignmentRow .btn-group {
+  display: flex;
+  align-items: stretch;
+}

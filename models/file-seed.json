@@ -1,0 +1,11 @@
+[
+  {"name": "JavaScript Basics", "week": 0},
+  {"name": "JavaScript Loops, Arrays and Objects", "week": 0},
+  {"name": "AJAX Basics", "week": 0},
+  {"name": "Git Basics", "week": 0},
+  {"name": "GitHub Basics", "week": 0},
+  {"name": "Object-Oriented JavaScript", "week": 1},
+  {"name": "Defining Variables with led and const", "week": 1},
+  {"name": "Introducing Arrow Function Syntax", "week": 1},
+  {"name": "JavaScript and the DOM", "week": 1}
+]

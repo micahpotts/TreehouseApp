@@ -25,28 +25,30 @@
 </form>
 
 
-<div role="group row" id="parentBtn">
+<div role="group row" id="parentBtn" >
   <clickFunctions>
-    <div ng-repeat="assignment in assignments | orderBy: 'week'">
+    <div ng-repeat="assignment in assignments | orderBy: 'week'" class="row assignmentRow">
       <div class="btn-group">
 
         <button type="button" class="btn btn-default" aria-label="Week Up" ng-click="upAss(assignment._id)">
-          <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+          <span aria-hidden="true">+</span>
         </button>
 
         <button type="button" class="btn btn-success" >{{assignment.week}}</button>
 
         <button type="button" class="btn btn-default" aria-label="Week Down" ng-click="downAss(assignment._id)">
-          <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+          <span aria-hidden="true">-</span>
         </button>
 
-        <button type="button" class="btn btn-default">{{assignment.name}}</button>
+        </div>
+
+      <span class="assignmentName">{{assignment.name}}</span>
 
         <button type="button" class="btn btn-default"  aria-label="Delete" ng-click="deleteAss(assignment._id)">
           <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
         </button>
 
-      </div>
+
     </div>
   </clickFunctions>
 </div>
