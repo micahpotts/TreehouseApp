@@ -10,7 +10,7 @@ myApp.controller("ListAssignmentsController", [
 
     $http({
       method: "GET",
-      url: `http://localhost:3000/assignments`
+      url: `/assignments`
     })
     .then(
       function(response) {
@@ -24,7 +24,7 @@ myApp.controller("ListAssignmentsController", [
     $scope.deleteAss = function(id) {
       $http({
         method: "DELETE",
-        url: `http://localhost:3000/assignments/${id}`
+        url: `/assignments/${id}`
       })
         .then(
           function(response) {
@@ -42,7 +42,7 @@ myApp.controller("ListAssignmentsController", [
     $scope.upAss = function(id) {
       $http({
         method: "PUT",
-        url: `http://localhost:3000/assignments/${id}/weekup`
+        url: `/assignments/${id}/weekup`
       })
         .then(
           function(response) {
@@ -60,7 +60,7 @@ myApp.controller("ListAssignmentsController", [
     $scope.downAss = function(id) {
       $http({
         method: "PUT",
-        url: `http://localhost:3000/assignments/${id}/weekdown`
+        url: `/assignments/${id}/weekdown`
       })
         .then(
           function(response) {
@@ -83,7 +83,7 @@ myApp.controller("ListAssignmentsController", [
 
       $http({
         method: "POST",
-        url: `http://localhost:3000/assignments`,
+        url: `/assignments`,
         data: newAssCity
       })
         .then(

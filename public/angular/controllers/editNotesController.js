@@ -10,7 +10,7 @@ myApp.controller("editNotesController", [
 
     $http({
       method: "GET",
-      url: `http://localhost:3000/assignments/${$routeParams.assignmentID}`
+      url: `assignments/${$routeParams.assignmentID}`
     })
     .then(
       function(response) {
@@ -28,7 +28,7 @@ myApp.controller("editNotesController", [
 
       $http({
         method: "PUT",
-        url: `http://localhost:3000/assignments/${$routeParams.assignmentID}`,
+        url: `/assignments/${$routeParams.assignmentID}`,
         data: someNotes
       })
         .then(
