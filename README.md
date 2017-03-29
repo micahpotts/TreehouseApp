@@ -6,21 +6,24 @@ Stay on track with your Treehouse assignments throughout the 12 week Code Louisv
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Required Technologies
+### Technologies
 
-Download and install each from the links provided.
+This app makes use of the following technologies.
+Download and install both MongoDB and Node.js from the links provided, the others will install with NPM during installation.
 
-- [MongoDb](http://www.mongodb.org/)
+- **[Node.js](http://nodejs.org/)**
+- **[MongoDb](http://www.mongodb.org/)**
 - [MongooseJs](http://mongoosejs.com/)
 - [ExpressJs](http://expressjs.com/)
 - [AngularJs](http://angularjs.org/)
-- [Node.js](http://nodejs.org/)
+
 
 You will also need a working knowledge of the console of your choice. I use PowerShell.
 
 ## Installation
 
 Let's get your development env up and running!
+(Note: Though I use PORT 300 in the example below, the app will be running on whatever port is specified in your PORT environment variable.)
 
 1. From your console, clone this repo onto your local machine.
 
@@ -31,7 +34,7 @@ git clone https://github.com/micahpotts/TreehouseApp.git
 2. Change directory to go to root directory
 
 ```
-cd \sls\
+cd TreehouseApp
 ```
 
 3. Install dependencies via npm
@@ -50,21 +53,22 @@ The console should respond with
 waiting for connections on port 27017
 ```
 
-5. From the sylApp directory, use node to start the app.
+5. From the TreehouseApp directory, use node to start the app.
 
 ```
 node app.js
 ```
 The console should respond with
 ```
-Express server is listening on port 3000
+Express server is listening on port 3000* (*or your PORT env variable)
 db connection succseeful
 DB seeded
 ```
 
 ## Using the app
 
-After the app is up and running, direct your browser to "localhost:3000"
+After the app is up and running, direct your browser to "localhost:3000*" (*or your PORT env variable)
+
 
 ### Application Features
 
