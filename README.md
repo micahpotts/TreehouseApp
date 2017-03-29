@@ -98,5 +98,5 @@ This project is licensed under the ISC License
 * Thank you to [Code Louisville](https://github.com/CodeLouisville) for the opportunity to learn with you!
 * [Shauvon](https://github.com/ShauvonM) and [Aaron](https://github.com/aarontropy) who helped me solve many a problem throughout the creation of my MEAN Stack App. They are amazing mentors!
 * [Pete](https://github.com/IzzyD7) for sticking it out with me.
-* [PurpleBooth](https://github.com.PurpleBooth) for this README-Template!
+* [PurpleBooth](https://github.com/PurpleBooth) for this README-Template!
 * [Alan](https://github.com/zeroasterisk) for the encouragement and tutoring!
