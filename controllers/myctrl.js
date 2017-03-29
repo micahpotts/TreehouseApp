@@ -48,6 +48,13 @@ module.exports = {
     });
   },
 
+  //PUT /:assignmentID/notes
+  notes: function(req,res, next) {
+    req.item.notes = req.body.notes;
+    req.item.save();
+    res.json(req.item);
+  },
+
   weekUp: function(req, res){
     if(req.item.week < 12) {
       req.item.week++;
@@ -67,6 +74,7 @@ module.exports = {
     return req.item.week;
   }
   },
+
 
   //DELETE /assignmentList/:assignmentID/
   //DELETE assignment

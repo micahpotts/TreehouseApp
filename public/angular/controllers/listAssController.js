@@ -5,7 +5,8 @@ myApp.controller("ListAssignmentsController", [
   "$http",
   "$route",
   "$routeParams",
-  function($scope, $http, $route, $routeParams) {
+  "$location",
+  function($scope, $http, $route, $routeParams, $location) {
 
     $http({
       method: "GET",
@@ -27,12 +28,12 @@ myApp.controller("ListAssignmentsController", [
       })
         .then(
           function(response) {
-            $scope.sata = response.data;
+            $scope.data = response.data;
             $scope.status = response.status;
             $route.reload();
           },
           function(response) {
-            $scope.dats = response.data || "Request failed";
+            $scope.data = response.data || "Request failed";
             $scope.status = response.status;
           }
         );
@@ -45,12 +46,12 @@ myApp.controller("ListAssignmentsController", [
       })
         .then(
           function(response) {
-            $scope.sata = response.data;
+            $scope.data = response.data;
             $scope.status = response.status;
             $route.reload();
           },
           function(response) {
-            $scope.dats = response.data || "Request failed";
+            $scope.data = response.data || "Request failed";
             $scope.status = response.status;
           }
         );
@@ -63,12 +64,12 @@ myApp.controller("ListAssignmentsController", [
       })
         .then(
           function(response) {
-            $scope.sata = response.data;
+            $scope.data = response.data;
             $scope.status = response.status;
             $route.reload();
           },
           function(response) {
-            $scope.dats = response.data || "Request failed";
+            $scope.data = response.data || "Request failed";
             $scope.status = response.status;
           }
         );

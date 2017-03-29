@@ -13,6 +13,7 @@ router.post('/', myctrl.newAssignment);
 router.put('/:assignmentID/weekup', myctrl.weekUp);
 router.put('/:assignmentID/weekdown', myctrl.weekDown);
 router.delete('/:assignmentID', myctrl.deleteAssignment);
+router.put('/:assignmentID', myctrl.notes);
 
 
 module.exports = router;

@@ -11,8 +11,8 @@ myApp.config([
         controller: "ListAssignmentsController"
       })
       .when("/assignments/:assignmentID", {
-        templateUrl: "angular/templates/thisTemplate.html",
-        controller: "ListAssignmentsController"
+        templateUrl: "angular/templates/takeNotes.html",
+        controller: "editNotesController"
       })
       .when("/assignments/:assignmentID/weekup", {
         templateUrl: "angular/templates/thisTemplate.html",

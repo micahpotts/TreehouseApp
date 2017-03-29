@@ -1,3 +1,7 @@
+<h1>Treehouse Checklist</h1>
+
+<p class="lead">Use this app to keep up with which Treehouse modules you should complete each week.<br> Course is broken up into 12 weeks with a "Week 0" for prerequisites.</p>
+
 <form class="form-inline my-2 my-lg-0">
   <input class="form-control mr-sm-2" type="text" ng-model="newName" placeholder="Add Module or Assignment"></input>
 
@@ -46,6 +50,10 @@
 
         <button type="button" class="btn btn-default"  aria-label="Delete" ng-click="deleteAss(assignment._id)">
           <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>
+        </button>
+
+        <button type="button" class="btn btn-default" ng-href="#!/assignments/{{assignment._id}}" aria-label="Notes">
+          <span aria-hidden="true">Notes</span>
         </button>
 
 
