@@ -99,5 +99,9 @@ myApp.controller("ListAssignmentsController", [
         );
     };
 
+    $scope.go = function(){
+      $location.path("/home");
+    }
+
   }
 ]);
