@@ -43,3 +43,12 @@ form {
   display: flex;
   align-items: stretch;
 }
+
+.input-group {
+  display: block;
+  align-items: stretch;
+}
+
+blockquote {
+  border-left: none;
+}

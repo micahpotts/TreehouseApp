@@ -1,12 +1,14 @@
 
   <h1>Notes about {{assignment.name}}</h1>
 
-
+  <div class=existingNotes>
+    <blockquote>
+      <p>{{assignment.notes}}</p>
+    </blockquote>
 
   <div class="input-group">
     <input class="text" ng-model="moduleNotes"
-    <textarea rows="10" cols="70">
-    {{assignment.notes}}
+    <textarea placeholder={{assignment.notes}}>
     </textarea>
 
     <button class="btn btn-success" ng-click="takeNotes(assignment._id)" type="submit">Submit</button>
