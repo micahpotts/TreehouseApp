@@ -1,7 +1,7 @@
 
   <h1>Notes about {{assignment.name}}</h1>
 
-  <div class=existingNotes>
+  <div class="existingNotes">
     <blockquote>
       <p>{{assignment.notes}}</p>
     </blockquote>
@@ -12,4 +12,10 @@
     </textarea>
 
     <button class="btn btn-success" ng-click="takeNotes(assignment._id)" type="submit">Submit</button>
+  </div>
+
+  <div class="finished">
+    <a href="#!/assignments" type="button" class="btn btn-success" aria-label="Notes">
+      <span aria-hidden="true">Back to list</span>
+    </button>
   </div>
