@@ -51,4 +51,17 @@ form {
 
 blockquote {
   border-left: none;
+  padding-top: 30px;
+}
+
+.true {
+  text-decoration: line-through;
+}
+
+.false {
+  text-decoration: none;
+}
+
+a {
+  color: black;
 }

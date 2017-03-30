@@ -25,7 +25,6 @@ myApp.controller("editNotesController", [
       var someNotes = {
         notes: $scope.moduleNotes
       };
-
       $http({
         method: "PUT",
         url: `/assignments/${$routeParams.assignmentID}`,

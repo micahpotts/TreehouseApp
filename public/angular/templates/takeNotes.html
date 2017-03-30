@@ -6,15 +6,14 @@
       <p>{{assignment.notes}}</p>
     </blockquote>
 
-  <div class="input-group">
-    <input class="text" ng-model="moduleNotes"
-    <textarea placeholder={{assignment.notes}}>
+  <div class="textarea">
+    <textarea rows="10" cols="40" class="text" ng-model="moduleNotes" placeholder={{assignment.notes}}>
     </textarea>
-
-    <button class="btn btn-success" ng-click="takeNotes(assignment._id)" type="submit">Submit</button>
   </div>
 
-  <div class="finished">
+  <div class="input-group">
+    <button class="btn btn-success" ng-click="takeNotes(assignment._id)" type="submit">Submit</button>
+
     <a href="#!/assignments" type="button" class="btn btn-success" aria-label="Notes">
       <span aria-hidden="true">Back to list</span>
     </a>

@@ -7,7 +7,8 @@ var Schema = mongoose.Schema;
 var ListItemSchema = new Schema({
   name: String,
   week: Number,
-  notes: {type: String, default: ""}
+  notes: {type: String, default: ""},
+  complete: {type: Boolean, default: false}
 });
 
 

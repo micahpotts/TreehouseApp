@@ -14,6 +14,7 @@ router.put('/:assignmentID/weekup', myctrl.weekUp);
 router.put('/:assignmentID/weekdown', myctrl.weekDown);
 router.delete('/:assignmentID', myctrl.deleteAssignment);
 router.put('/:assignmentID', myctrl.notes);
+router.post('/:assignmentID/complete', myctrl.complete);
 
 
 module.exports = router;

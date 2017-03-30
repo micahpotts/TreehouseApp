@@ -55,6 +55,13 @@ module.exports = {
     res.json(req.item);
   },
 
+  //PUT /:assignmentID/complete
+  complete: function(req, res, next) {
+    req.item.complete = !req.item.complete;
+    req.item.save();
+    res.json(req.item);
+  },
+
   weekUp: function(req, res){
     if(req.item.week < 12) {
       req.item.week++;

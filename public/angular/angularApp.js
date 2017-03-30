@@ -22,6 +22,10 @@ myApp.config([
         templateUrl: "angular/templates/thisTemplate.html",
         controller: "ListAssignmentsController"
       })
+      .when("/assignments/:assignmentID/checkOv", {
+        templateUrl: "angular/templates/thisTemplate.html",
+        controller: "ListAssignmentsController"
+      })
 
       .otherwise("/assignments");
 

@@ -80,7 +80,6 @@ myApp.controller("ListAssignmentsController", [
         name: $scope.newName,
         week: $scope.newWeek
       };
-
       $http({
         method: "POST",
         url: `/assignments`,
@@ -99,9 +98,23 @@ myApp.controller("ListAssignmentsController", [
         );
     };
 
-    // $scope.go = function(){
-    //   $location.path("/home");
-    // }
+    $scope.chekOv = function() {
+      $http({
+        method: "POST",
+        url: `/assignments/${id}/complete`
+      })
+      .then(
+        function(response) {
+          $scope.data = response.data;
+          $scope.status = response.status;
+          $route.reload();
+        },
+        function(response) {
+          $scope.data = response.data || "Request failed";
+          $scope.status = response.status;
+        }
+      );
+    }
 
   }
 ]);
