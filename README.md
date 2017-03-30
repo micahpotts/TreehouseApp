@@ -77,12 +77,13 @@ After the app is up and running, direct your browser to "localhost:3000*" (*or y
  - Edit Assignment's "due by" week, with single button click
  - Delete Assignment when complete
  - Assignments are listed by "due by" week, so you always know what to do next
+ - Take notes on each module
 
 
 ## Coming Soon!
 
 More functionality is being added. Soon the app will also:
- - Allow you to take notes on each Treehouse Module
+ - ~~Allow you to take notes on each Treehouse Module~~ *This feature has been added!*
  - Mark Assignments as complete without deleting it from the database
 
 ## Contributing
